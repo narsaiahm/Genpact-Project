@@ -1,0 +1,62 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<div style="text-align: center">
+    <h4 style="color: green;   margin-right: 44%;">{{successMsg}}</h4>
+</div>
+<div style="text-align: center">
+    <h4 style="color: red;   margin-right: 44%;">{{finalErrorMessage}}</h4>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <form>
+                <fieldset>
+                    <legend class="text-center">Edit Existing Book Details <span class="req"><small>
+                                required *</small></span></legend>
+
+                    <div class="form-group">
+                        <label for="title"><span class="req">* </span> Title: <small>The Book Title Name</small> </label>
+                        <input required type="text" [(ngModel)]="book.title" name="title" id="title"
+                            class="form-control phone" maxlength="28" placeholder="Enter book name..." />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cover"><span class="req">* </span> Book Cover Name: </label>
+                        <input class="form-control" type="text" [(ngModel)]="book.cover" name="cover" id="txt" required
+                            placeholder="Enter valid Book Cover Name" />
+                        <div id="errFirst"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="publisher"><span class="req">* </span>Book Publisher : </label>
+                        <input class="form-control" type="text" [(ngModel)]="book.publisher" name="publisher" id="txt"
+                            placeholder="publisher" required />
+                        <div id="errLast"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pages"><span class="req">* </span> No Pages: </label>
+                        <input class="form-control" required type="text" [(ngModel)]="book.pages" name="pages"
+                            id="pages" placeholder="No of Pages" />
+                    </div>
+                    <div class="form-group">
+                        <label for="available"><span class="req">* </span> No of Books Available: </label>
+                        <input class="form-control" required type="text" [(ngModel)]="book.available" name="available"
+                            id="available" placeholder="No of Books available" />
+                        <div class="status" id="status"></div>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-success" type="submit" name="updateBook" value="updateBook" (click)="updateBook(book)">Edit Book</button>
+                                          </div>
+                </fieldset>
+            </form><!-- ends register form -->
+            <!-- second for to fiter user-->
+        </div><!-- ends col-6 -->
+
+    </div>
+</div>
+
+
