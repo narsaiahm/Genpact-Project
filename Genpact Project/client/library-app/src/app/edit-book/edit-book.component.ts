@@ -47,11 +47,9 @@ response.subscribe(resp => {
 console.log("Update bookId :"+book);
 this.bookService.updateBookInfo(book).subscribe( resp => {
   console.log(resp);
-  alert("success updated");
-this.successMsg = "Edit Book Details Successfully."
+ this.successMsg = "Edit Book Details Successfully."
 
 }, error1 => {
-  alert("failed updated");
   this.finalErrorMessage = 'The book details are not updated . Please try again.';
    });
 
